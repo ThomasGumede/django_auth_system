@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class='relative flex flex-col md:flex-row items-center justify-between sm:w-9/12 bg-white rounded-2xl shadow-2xl my-6 p-3'>
+        <div class='space-y-5'>
+            <div class="font-bold text-2xl sm:text-3xl text-gray-800">
+                <h1>Activation Email Sent</h1>
+            </div>
+            <div class="sm:text-base text-gray-600">
+                <p>
+                {{ email_sent }}
+                </p>
+            </div>
+
+            <div class='self-end py-4 px-6 text-gray-400 font-medium text-sm'>
+                <a href="{% url 'accounts:login' %}">Go To Login page</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
